@@ -1,0 +1,25 @@
+Recipes site
+
+
+The project is dedicated for people who loves or wants to learn cooking. 
+The site will provide many step by step recipes. 
+
+The project will contain many categories like:
+  - baking
+  - basics
+  - desserts
+  - salads
+  - drinks etc.
+
+also there will be subcategories like:
+
+  - baking:
+    - savory
+    - sweet
+
+  - desserts
+    - ice creams
+    - yogurts 
+
+    etc.
+
