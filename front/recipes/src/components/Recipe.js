@@ -17,7 +17,6 @@ class Recipe extends Component {
    render() {
       return(
          <div className = "Recipe"> 
-         
          </div>
       );
    }
