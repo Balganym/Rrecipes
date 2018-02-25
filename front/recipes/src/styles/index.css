@@ -7,13 +7,93 @@ body {
 }
 
 .Header{
-  width: 100%;
+  width: 98%;
   height: 400px;
+  margin: 0 auto;
 }
 
 .Header-top{
   width: 100%;
+  height: 30px;
+  line-height: 30px;
+  background-color: #3E404D;
+  color: white;
+  font-family: "Work Sans";
+  box-sizing: border-box;
+  padding-left: 50px;
+}
+
+.Header-body{
+  padding-top: 20px;
+  padding-bottom: 16px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Header-bottom{
+  width: 100%;
   height: 40px;
+  line-height: 40px;
+  background-color: #3E404D;
+  color: white;
+  font-family: "Work Sans";
+}
+
+.Menu{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 100px;
+  padding-right: 100px;
+  box-sizing: border-box;
+}
+
+.Munu a{
+  color: white !important;
+}
+
+.Home{
+  color: black;
+  width: 100%;
+}
+
+.Home .video{
+  width: 100%;
+  height: 480px;
+}
+
+.Home-top{
+  width: 100%;
+  background-color: #000000;
+}
+
+.Home-body{
+  width: 100%;
+  background-color: white;
+}
+
+.section{
+  width: 100%;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding-top: 1%;
+}
+
+.box{
+  height: 300px;
   background-color: #3E404D;
 }
+
+.box-small{
+  width: 19.6%;
+}
+
+.box-large{
+  width: 59%;
+}
+
 

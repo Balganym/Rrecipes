@@ -10,13 +10,6 @@ import {
 } from 'react-router-dom'
 
 ReactDOM.render(
-  <div className="Page">
-    <Header />
-    <Router>
-      <div>
-        <Route path="/recipe" component={Recipe}/>
-      </div>
-    </Router>
-  </div>,
+    <Header />,
   document.getElementById('root')
 );
