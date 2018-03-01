@@ -1,18 +1,22 @@
 import React, { Component } from 'react';
-import logo from '../img/logo.png'
 import food from '../img/food.mp4'
-
-const images = [
-  logo, 
-]
+import Recipe from './Recipe.js'
+import {Route} from 'react-router-dom'
+import Step from './Step.js'
 
 class Home extends Component {
   constructor(){
     super()
     this.state={
-      recipes: [],
+      redirect: null
     }
   }
+
+  handleRecipeClick = (id) => {
+    console.log(123)
+    
+  }
+
   render(){
     return(
       <div className="Home">
@@ -24,20 +28,16 @@ class Home extends Component {
         </div>
         <div className="Home-body">
           <div className="section">
-            <div className="box box-small" style={{backgroundImg: {logo}}}>
-            </div>
-            <div className="box box-small" style={{backgroundImg: {logo}}}>
-            </div>
-            <div className="box box-large" style={{backgroundImg: {logo}}}>
-            </div>
-          </div>
-          <div className="section">
-            <div className="box box-large" style={{backgroundImg: {logo}}}>
-            </div>
-            <div className="box box-small" style={{backgroundImg: {logo}}}>
-            </div>
-            <div className="box box-small" style={{backgroundImg: {logo}}}>
-            </div>
+            {this.props.recipes.map((r, ix) => {
+              return(
+                <Recipe
+                  key = {ix}
+                  recipe = {r}
+                  onRecipeClick = {this.handleRecipeClick}
+                />
+              )
+            })}
+            <Route path="/recipe" component={Step} />
           </div>
         </div>
       </div>
@@ -46,3 +46,10 @@ class Home extends Component {
 }
 
 export default Home;
+
+
+
+
+
+
+

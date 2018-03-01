@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import {
-  BrowserRouter as Router,
-  Route,
-  Link
+  Link, Route
 } from 'react-router-dom'
 import logo from "../img/logo.png"
-import Home from "./Home.js"
-import Group from "./Group.js"
+import Group from './Group.js'
+import Home from './Home.js'
+import Step from './Step.js'
 
 const st = {
   color: "#fff",
@@ -23,22 +22,15 @@ class Header extends Component {
           <img src={logo} className="logo" alt="logo"/>
         </div>
         <div className="Header-bottom">
-          <Router>
-            <div className="page">
+          <div className="page">
               <div className="Menu">
-                <Link style={st} to="/" >Home</Link>
+                <Link style={st} to="/">Home</Link>
                 <Link style={st} to="/desserts">Desserts</Link>
                 <Link style={st} to="/salads">Salads</Link>
                 <Link style={st} to="/pasta">Pasta</Link>
                 <Link style={st} to="/drinks">Drinks</Link>
               </div>
-              <Route exact path="/" component={Home}/>
-              <Route exact path="/desserts" component={Group}/>
-              <Route exact path="/salads" component={Group}/>
-              <Route exact path="/pasta" component={Group}/>
-              <Route exact path="/drinks" component={Group}/>
-            </div>
-          </Router>
+          </div>
         </div>
       </div>
     );
