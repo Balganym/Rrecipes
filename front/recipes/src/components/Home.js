@@ -14,7 +14,6 @@ class Home extends Component {
 
   handleRecipeClick = (id) => {
     console.log(123)
-    
   }
 
   render(){

@@ -3,7 +3,7 @@ export const recipes = [
           id: 1,
           category: "salads",
           name: "Strawberry Spinach Salad ",
-          mainImg: 'https://images.media-allrecipes.com/userphotos/600x600/273205.jpg',
+          mainImg: 'https://i.pinimg.com/736x/27/8a/d5/278ad59d03cfca1d7a33d440bc51b2c0--fresh-asparagus-asparagus-caprese.jpg',
           imgs: [
             'https://images.media-allrecipes.com/userphotos/600x600/273205.jpg',
             'https://images.media-allrecipes.com/userphotos/600x600/4542529.jpg'
@@ -32,7 +32,7 @@ export const recipes = [
           id: 2,
           category: "drinks",
           name: "Heart Healthy Blueberry Smoothie",
-          mainImg: "https://images.media-allrecipes.com/userphotos/720x405/1129213.jpg",
+          mainImg: "https://s-media-cache-ak0.pinimg.com/originals/e4/66/95/e466950393ff0df32628ec2c4fb542bd.jpg",
           imgs: [
             'https://images.media-allrecipes.com/userphotos/720x405/1129213.jpg',
             'https://images.media-allrecipes.com/userphotos/720x405/4535697.jpg'
@@ -52,9 +52,9 @@ export const recipes = [
         },
         {
           id: 3,
-          category: "dessert",
+          category: "desserts",
           name: "Baked Teriyaki Chicken",
-          mainImg: "https://images.media-allrecipes.com/userphotos/720x405/1129213.jpg",
+          mainImg: "https://imagesvc.timeincapp.com/v3/mm/image?url=https%3A%2F%2Fcdn-image.realsimple.com%2Fsites%2Fdefault%2Ffiles%2Fstyles%2Fportrait_435x518%2Fpublic%2Fdate-ginger-sticky-toffee-puddings.jpg%3Fitok%3DqE5IUxbU&w=700&q=85",
           imgs: [
             'https://images.media-allrecipes.com/userphotos/720x405/1129213.jpg',
             'https://images.media-allrecipes.com/userphotos/720x405/4535697.jpg'
@@ -107,7 +107,7 @@ export const recipes = [
           id: 5,
           category: "drinks",
           name: "Heart Healthy Blueberry Smoothie",
-          mainImg: "https://images.media-allrecipes.com/userphotos/720x405/1129213.jpg",
+          mainImg: "https://www.motherearthliving.com/-/media/Images/MEL/Editorial/Articles/Magazine-Articles/2006/07-01/Cool-Down-with-Iced-Drinks/iced-drinks.jpg",
           imgs: [
             'https://images.media-allrecipes.com/userphotos/720x405/1129213.jpg',
             'https://images.media-allrecipes.com/userphotos/720x405/4535697.jpg'
@@ -127,9 +127,9 @@ export const recipes = [
         },
         {
           id: 6,
-          category: "chicken",
+          category: "salads",
           name: "Baked Teriyaki Chicken",
-          mainImg: "https://images.media-allrecipes.com/userphotos/720x405/1129213.jpg",
+          mainImg: "https://cafedelites.com/wp-content/uploads/2017/05/Best-Lemon-Herb-Mediterranean-Pasta-Salad-IMAGES-3-780x1152.jpg",
           imgs: [
             'https://images.media-allrecipes.com/userphotos/720x405/1129213.jpg',
             'https://images.media-allrecipes.com/userphotos/720x405/4535697.jpg'

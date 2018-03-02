@@ -107,16 +107,19 @@ body {
 }
 
 .cover{
-  padding: 20px;
+  padding-top: 20px;
+  padding-left: 20px;
   box-sizing: border-box;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.6);
   width: 100%;
-  height: 100%;
+  height: 20%;
+  color: white;
 }
 
-.cover h4{
+.cover a{
   color: white;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .box-large{
@@ -125,6 +128,57 @@ body {
 
 .recImg{
   width: 100%;
+}
+
+.headerImg{
+  width: 100%;
+  margin: 10px 0 0 0;
+}
+
+.headerImg img{
+  width: 100%;
+}
+
+.recipe-box{
+  margin-top: 20px;
+  width: 98%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.rec-img{
+  width: 80%;
+  margin: 0 auto;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  padding: 10px;
+}
+
+.card{
+  padding: 10px;
+  box-sizing: border-box;
+  width: 40%;
+  height: auto;
+  border: 1px solid #000;
+}
+
+.rec-img img{
+  width: 100%;
+}
+
+.box-info{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ingredients{
+  width: 50%;
+  margin-left: 20px;
+  border: 1px solid #000;
+  min-height: 556px;
 }
 
 

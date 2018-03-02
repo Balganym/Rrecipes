@@ -1,11 +1,8 @@
 import React, { Component } from 'react';
 import {
-  Link, Route
+  Link
 } from 'react-router-dom'
 import logo from "../img/logo.png"
-import Group from './Group.js'
-import Home from './Home.js'
-import Step from './Step.js'
 
 const st = {
   color: "#fff",

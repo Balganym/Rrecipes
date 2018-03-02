@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Link} from 'react-router-dom'
 
 class Recipe extends Component {
 
@@ -10,7 +11,7 @@ class Recipe extends Component {
       return(
          <div className="box box-small" style={{backgroundImage: "url(" + this.props.recipe.mainImg + ")"}}>
             <span className="cover">
-               <h4 onClick={this.handleClick}>{this.props.recipe.name}</h4>
+               <Link onClick={this.handleClick} to='/recipe'>{this.props.recipe.name}</Link>
             </span>
           </div>
       );

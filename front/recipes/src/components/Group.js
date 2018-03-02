@@ -1,25 +1,29 @@
 import React, { Component } from 'react';
-import logo from '../img/logo.png'
 import Recipe from './Recipe.js'
 
 class Group extends Component {
   
-  handleRecipeClick(id){
-    console.log(id + '!!!');
+  handleRecipeClick = (id) => {
+    this.props.onRecipeClick(id)
   }
-  
   render(){
     return(
     <div className="page">
-      {this.props.desserts.map((des, ix) => {
-        return (
-          <Recipe
-            key = {ix}
-            recipe = {des}
-            onRecipeClick = {this.handleRecipeClick}
-          />
-        )
-      })}
+      <div className="headerImg">
+        <img src={this.props.img} alt="img"/>
+      </div>
+      <div className="section">
+        {this.props.desserts.map((des, ix) => {
+          return (
+            <Recipe
+              key = {ix}
+              recipe = {des}
+              curRecipe={this.props.curRecipe}
+              onRecipeClick = {this.handleRecipeClick}
+            />
+          )
+        })}
+      </div>
     </div>
     )
   }
