@@ -8,6 +8,7 @@ export const recipes = [
             'https://images.media-allrecipes.com/userphotos/600x600/273205.jpg',
             'https://images.media-allrecipes.com/userphotos/600x600/4542529.jpg'
           ],
+          long: true,
           ingredients: [
             "2 tablespoons sesame seeds",
             "1 tablespoon poppy seeds",
@@ -32,7 +33,7 @@ export const recipes = [
           id: 2,
           category: "drinks",
           name: "Heart Healthy Blueberry Smoothie",
-          mainImg: "https://s-media-cache-ak0.pinimg.com/originals/e4/66/95/e466950393ff0df32628ec2c4fb542bd.jpg",
+          mainImg: "https://uz71pyzpz0-flywheel.netdna-ssl.com/wp-content/uploads/2016/07/champagne-rose-cotton-candy-cocktails-13.jpg",
           imgs: [
             'https://images.media-allrecipes.com/userphotos/720x405/1129213.jpg',
             'https://images.media-allrecipes.com/userphotos/720x405/4535697.jpg'
@@ -67,6 +68,7 @@ export const recipes = [
             "1/4 cup cider vinegar",
             "1/2 teaspoon ground ginger",
           ],
+          long: true,
           prepTime: "10m",
           readyIn: "1h 10m",
           steps: [
@@ -104,32 +106,10 @@ export const recipes = [
           ]
         },
         {
-          id: 5,
-          category: "drinks",
-          name: "Heart Healthy Blueberry Smoothie",
-          mainImg: "https://www.motherearthliving.com/-/media/Images/MEL/Editorial/Articles/Magazine-Articles/2006/07-01/Cool-Down-with-Iced-Drinks/iced-drinks.jpg",
-          imgs: [
-            'https://images.media-allrecipes.com/userphotos/720x405/1129213.jpg',
-            'https://images.media-allrecipes.com/userphotos/720x405/4535697.jpg'
-          ],
-          ingredients: [
-            "1 cup blueberries",
-            "3/4 cup pomegranate juice",
-            "1/2 cup low-fat plain Greek-style yogurt",
-            "1/2 cup skim milk",
-            "1/2 cup rolled oats",
-            "1/4 cup granular sucralose sweetener (such as Splenda®)",
-            "1 teaspoon ground cinnamon"
-          ],
-          prepTime: "10m",
-          readyIn: "10m",
-          steps: ["Blend blueberries, pomegranate juice, yogurt, milk, oats, sweetener, and cinnamon together in a blender until smooth, about 2 minutes."]
-        },
-        {
           id: 6,
           category: "salads",
           name: "Baked Teriyaki Chicken",
-          mainImg: "https://cafedelites.com/wp-content/uploads/2017/05/Best-Lemon-Herb-Mediterranean-Pasta-Salad-IMAGES-3-780x1152.jpg",
+          mainImg: "http://www.recipe4living.com/assets/itemimages/400/400/3/default_fe8888a1c73e6bc261811db5e4243ed5_Depositphotos_6983299_s.jpg",
           imgs: [
             'https://images.media-allrecipes.com/userphotos/720x405/1129213.jpg',
             'https://images.media-allrecipes.com/userphotos/720x405/4535697.jpg'
@@ -148,5 +128,28 @@ export const recipes = [
             "In a medium bowl, whisk together the sesame seeds, poppy seeds, sugar, olive oil, vinegar, paprika, Worcestershire sauce and onion. Cover, and chill for one hour.",
             "In a large bowl, combine the spinach, strawberries and almonds. Pour dressing over salad, and toss. Refrigerate 10 to 15 minutes before serving."
           ]
+        },
+        {
+          id: 5,
+          category: "drinks",
+          name: "Heart Healthy Blueberry Smoothie",
+          mainImg: "https://s-media-cache-ak0.pinimg.com/originals/f2/9e/b5/f29eb52e2529d492869744d0366380b7.jpg",
+          imgs: [
+            'https://images.media-allrecipes.com/userphotos/720x405/1129213.jpg',
+            'https://images.media-allrecipes.com/userphotos/720x405/4535697.jpg'
+          ],
+          ingredients: [
+            "1 cup blueberries",
+            "3/4 cup pomegranate juice",
+            "1/2 cup low-fat plain Greek-style yogurt",
+            "1/2 cup skim milk",
+            "1/2 cup rolled oats",
+            "1/4 cup granular sucralose sweetener (such as Splenda®)",
+            "1 teaspoon ground cinnamon"
+          ],
+          long: true,
+          prepTime: "10m",
+          readyIn: "10m",
+          steps: ["Blend blueberries, pomegranate juice, yogurt, milk, oats, sweetener, and cinnamon together in a blender until smooth, about 2 minutes."]
         },
       ]

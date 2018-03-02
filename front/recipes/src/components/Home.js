@@ -1,8 +1,24 @@
 import React, { Component } from 'react';
 import food from '../img/food.mp4'
-import Recipe from './Recipe.js'
+import RecipeCard from './RecipeCard.js'
 import {Route} from 'react-router-dom'
-import Step from './Step.js'
+import Recipe from './Recipe.js'
+import {GridList} from 'material-ui/GridList';
+
+const styles = {
+  root: {
+    width: '100%',
+    display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'space-around',
+    marginTop: '20px'
+  },
+  gridList: {
+    width: '100%',
+    height: 'auto',
+    overflowY: 'auto',
+  },
+};
 
 class Home extends Component {
   constructor(){
@@ -13,7 +29,7 @@ class Home extends Component {
   }
 
   handleRecipeClick = (id) => {
-    console.log(123)
+    this.props.onRecipeClick(id)
   }
 
   render(){
@@ -26,17 +42,22 @@ class Home extends Component {
           <div className="content"></div>
         </div>
         <div className="Home-body">
-          <div className="section">
-            {this.props.recipes.map((r, ix) => {
-              return(
-                <Recipe
+          <div style={styles.root}>
+            <GridList
+              cols={3}
+              cellHeight={300}
+              padding={1}
+              style={styles.gridList}
+            >
+              {this.props.recipes.map((tile, ix) => (
+                <RecipeCard 
                   key = {ix}
-                  recipe = {r}
+                  recipe = {tile}
                   onRecipeClick = {this.handleRecipeClick}
                 />
-              )
-            })}
-            <Route path="/recipe" component={Step} />
+              ))}
+            </GridList>
+            <Route path="/recipe" component={Recipe} />
           </div>
         </div>
       </div>

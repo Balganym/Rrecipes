@@ -11,7 +11,7 @@ class Ingredients extends Component {
    render() {
     return(
       <div className="ingredients">
-        <h4>Ingredients: </h4>
+        <h4 className='font'>Ingredients: </h4>
         <ul>
           {this.props.ingr.map((i, ix)=>{
             return(
