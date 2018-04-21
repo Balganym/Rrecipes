@@ -7,20 +7,19 @@ class Description extends Component {
       <div>
         <div className="recipe-box">
           <div className="card">
-            <div className="rec-img"><img src={this.props.recipe.mainImg} alt="img"/></div>
+            <div className="rec-img"><img src={this.props.recipe.image} alt="img"/></div>
             <div className="box-info">
-              <h4>{this.props.recipe.name}</h4>
+              <h4>{this.props.recipe.title}</h4>
               <div className="info">
-                <h5>Preparation time: {this.props.recipe.prepTime}</h5>
-                <h5>Ready in: {this.props.recipe.readyIn}</h5>
+                <h5>Portions: {this.props.recipe.portions}</h5>
+                {/*<h5>Ready in: {this.props.recipe.readyIn}</h5>*/}
               </div>
             </div>
           </div>
           <div className="description">
             <Ingredients ingr={this.props.recipe.ingredients}/>
             <Steps 
-              steps={this.props.recipe.steps}
-              imgs={this.props.recipe.imgs}
+              steps={this.props.recipe.instructions}
              />
           </div>
         </div>

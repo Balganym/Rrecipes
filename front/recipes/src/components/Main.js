@@ -8,6 +8,9 @@ import Home from "./Home.js"
 import Group from "./Group.js"
 import Recipe from "./Recipe.js"
 import {recipes} from '../constants/recipes.js'
+import axios from 'axios'
+
+const URL = 'http://localhost:8000/'
 
 class Main extends Component {
 
@@ -15,8 +18,17 @@ class Main extends Component {
     super(props);
     this.state = { 
       rec: null, 
-      curRecipeId: null
+      curRecipeId: null,
+      categories: []
     }
+  }
+
+  componentWillMount(){
+    axios.get(URL + "categories/")
+      .then(res => {
+        var categories = res.data
+        this.setState({categories})
+      })
   }
 
   handleRecipeClick = (id) => {
@@ -31,11 +43,22 @@ class Main extends Component {
             <Header/>
             <Route exact path="/" render={()=>(
               <Home 
-                recipes={recipes} 
                 onRecipeClick = {this.handleRecipeClick}
               />
             )} />
-            <Route path="/desserts" render={() => (
+
+            {this.state.categories.map((c, ix) => (
+              <Route key={ix} path={"/"+c.link} render={() => (
+                <Group
+                  img={c.image}
+                  link = {URL + "recipes/" + c.link + "/"}
+                  onRecipeClick = {this.handleRecipeClick}
+                  curRecipe = {this.state.currentRecipe}
+                />)} 
+              />
+            ))}
+
+            {/*<Route path="/desserts" render={() => (
               <Group
                 img='https://images.media-allrecipes.com/images/75028.jpg'
                 desserts = {recipes.filter(rec => rec.category === 'desserts')}
@@ -63,10 +86,9 @@ class Main extends Component {
                 desserts = {recipes.filter(rec => rec.category === 'pasta')}
                 onRecipeClick = {this.handleRecipeClick}
               />)} 
-            />
+            />*/}
             <Route exact path="/recipe" render={() => (
               <Recipe
-                recipes = {recipes}
                 id = {this.state.rec}
               />)} 
             />

@@ -16,8 +16,8 @@ class RecipeCard extends Component {
    render() {
       return(
          <GridTile
-            key={this.props.recipe.mainImg}
-            title={this.props.recipe.name}
+            key={this.props.recipe.image}
+            title={this.props.recipe.title ? this.props.recipe.title : this.props.recipe.name}
             actionPosition="left"
             titlePosition="top"
             titleStyle={styles.titleStyle}
@@ -27,7 +27,7 @@ class RecipeCard extends Component {
                <Link to='/recipe'>
                   <img 
                      onClick={this.handleClick} 
-                     src={this.props.recipe.mainImg} />
+                     src={this.props.recipe.image} />
                </Link>
             </div>
          </GridTile>

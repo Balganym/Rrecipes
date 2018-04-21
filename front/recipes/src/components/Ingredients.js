@@ -15,7 +15,7 @@ class Ingredients extends Component {
         <ul>
           {this.props.ingr.map((i, ix)=>{
             return(
-              <li key={ix}>{i}</li>
+              <li key={ix}>{i.name}</li>
             )
           })}
         </ul>

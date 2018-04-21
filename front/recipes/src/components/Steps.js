@@ -18,7 +18,7 @@ class Steps extends Component {
     return(
       <div className="Steps">
         <h4 className='font'>Steps: </h4>
-        <div style={styles.root}>
+        {/*<div style={styles.root}>
           <GridList cellHeight={100} style={styles.gridList} cols={2.2}>
             {this.props.imgs.map((tile) => (
               <GridTile
@@ -29,10 +29,10 @@ class Steps extends Component {
               </GridTile>
             ))}
           </GridList>
-        </div>
+        </div>*/}
         <ul>
           {this.props.steps.map((i, ix)=>{
-            return <li key={ix}>{i}</li>
+            return <li key={ix}>{i.instruction}</li>
           })}
         </ul>
       </div>

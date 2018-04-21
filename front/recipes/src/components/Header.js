@@ -16,19 +16,20 @@ class Header extends Component {
           <p>Eat Well, Be Happy, Love Food</p>
         </div>
         <div className="Header-body">
-          <img src={logo} className="logo" alt="logo"/>
+          <Link style={st} to="/">
+            <img src={logo} className="logo" alt="logo"/>
+          </Link>
         </div>
-        <div className="Header-bottom">
+        {/*<div className="Header-bottom">
           <div className="page">
               <div className="Menu">
-                <Link style={st} to="/">Home</Link>
                 <Link style={st} to="/desserts">Desserts</Link>
                 <Link style={st} to="/salads">Salads</Link>
                 <Link style={st} to="/pasta">Pasta</Link>
                 <Link style={st} to="/drinks">Drinks</Link>
               </div>
           </div>
-        </div>
+        </div>*/}
       </div>
     );
   }

@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import food from '../img/food.mp4'
 import RecipeCard from './RecipeCard.js'
-import {Route} from 'react-router-dom'
+import {Route, Link} from 'react-router-dom'
 import Recipe from './Recipe.js'
 import {GridList} from 'material-ui/GridList';
+import axios from 'axios'
 
 const styles = {
   root: {
@@ -21,11 +22,20 @@ const styles = {
 };
 
 class Home extends Component {
-  constructor(){
-    super()
+  constructor(props){
+    super(props)
     this.state={
-      redirect: null
+      redirect: null,
+      categories: [],
     }
+  }
+
+  componentWillMount(){
+    axios.get("http://localhost:8000/categories/")
+      .then(res => {
+        var categories = res.data
+        this.setState({categories})
+      })
   }
 
   handleRecipeClick = (id) => {
@@ -49,12 +59,14 @@ class Home extends Component {
               padding={1}
               style={styles.gridList}
             >
-              {this.props.recipes.map((tile, ix) => (
-                <RecipeCard 
-                  key = {ix}
-                  recipe = {tile}
-                  onRecipeClick = {this.handleRecipeClick}
-                />
+              {this.state.categories.map((tile, ix) => (
+                <Link to={"/" + tile.link} key={ix}>
+                  <RecipeCard 
+                    key = {ix}
+                    recipe = {tile}
+                    onRecipeClick = {this.handleRecipeClick}
+                  />
+                </Link>
               ))}
             </GridList>
             <Route path="/recipe" component={Recipe} />

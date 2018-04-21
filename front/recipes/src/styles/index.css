@@ -134,6 +134,8 @@ body {
 .headerImg{
   width: 100%;
   margin: 10px 0 0 0;
+  max-height: 300px;
+  overflow: hidden;
 }
 
 .headerImg img{
@@ -146,7 +148,6 @@ body {
   min-height: 300px;
   display: flex;
   justify-content: center;
-  align-items: center;
   margin-bottom: 20px;
 }
 

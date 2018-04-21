@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import RecipeCard from './RecipeCard.js'
 import {GridList} from 'material-ui/GridList';
+import axios from 'axios'
+
+const URL = 'http://localhost:8000/'
 
 const styles = {
   root: {
@@ -22,7 +25,25 @@ class Group extends Component {
   handleRecipeCardClick = (id) => {
     this.props.onRecipeClick(id)
   }
+
+  constructor(props){
+    super(props)
+    this.state = {
+      recipe: [],
+    }
+  }
+
+  componentWillMount(){
+    console.log("Axios starts")
+    axios.get(this.props.link).then(res => {
+      var recipe = res.data
+      console.log(recipe)
+      this.setState({recipe})
+    })
+  }
+
   render(){
+    const {desserts} = this.props
     return(
     <div className="page">
       <div className="headerImg">
@@ -35,14 +56,16 @@ class Group extends Component {
             padding={1}
             style={styles.gridList}
           >
-            {this.props.desserts.map((tile, ix) => (
-              <RecipeCard 
-                key = {ix}
-                recipe = {tile}
-                curRecipe={this.props.curRecipe}
-                onRecipeClick = {this.handleRecipeCardClick}
-              />
-            ))}
+            {this.state.recipe.map((r, ix) => {
+              return(
+                <RecipeCard 
+                  key = {ix}
+                  recipe = {r}
+                  curRecipe={this.props.curRecipe}
+                  onRecipeClick = {this.handleRecipeCardClick}
+                />
+              )
+            })}
           </GridList>
         </div>
     </div>
